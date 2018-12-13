@@ -108,10 +108,7 @@ body {
 	flex-wrap: wrap;
 }
 
-#top-left,
-#top-right,
-#bottom-left,
-#bottom-right,
+.game-section,
 #inner-circle {
 	height: 250px;
 	width: 250px;
@@ -120,23 +117,23 @@ body {
 	flex-shrink: 0;
 }
 
-#top-left {
-	border-radius: 250px 0 0 0;
+#green {
+	border-radius: 100% 0 0 0;
 	background: darkgreen;	
 }
 
-#top-right {
-	border-radius: 0 250px 0 0;
+#red {
+	border-radius: 0 100% 0 0;
 	background: darkred;
 }
 
-#bottom-left {
-	border-radius: 0 0 0 250px;
+#yellow {
+	border-radius: 0 0 0 100%;
 	background: goldenrod;
 }
 
-#bottom-right {
-	border-radius: 0 0 250px 0;
+#blue {
+	border-radius: 0 0 100% 0;
 	background: darkblue;
 }
 
