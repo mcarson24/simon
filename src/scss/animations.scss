@@ -1,0 +1,35 @@
+@keyframes red_celebration {
+	50% {
+		background: $red-light;
+	}
+	100% {
+		background: $red-dark;
+	}
+}
+
+@keyframes yellow_celebration {
+	50% {
+		background: $yellow-light;
+	}
+	100% {
+		background: $yellow-dark;
+	}
+}
+
+@keyframes blue_celebration {
+	50% {
+		background: $blue-light;
+	}
+	100% {
+		background: $blue-dark;
+	}
+}
+
+@keyframes green_celebration {
+	50% {
+		background: $green-light;
+	}
+	100% {
+		background: $green-dark;
+	}
+}

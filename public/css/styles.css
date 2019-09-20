@@ -1,0 +1,214 @@
+.toggle {
+  display: inline-block;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 1rem;
+  vertical-align: top;
+  border-radius: 2px; }
+
+.toggle__input {
+  display: none; }
+
+.toggle__button {
+  background-color: #300;
+  border: 1px solid #300;
+  color: #FFF;
+  cursor: pointer;
+  display: inline-block;
+  font-size: .75rem;
+  height: 30px;
+  line-height: 20px;
+  position: relative;
+  text-transform: uppercase;
+  transition: all .3s ease;
+  width: 40px; }
+
+.toggle__button::before {
+  background: #FFF;
+  color: #300;
+  content: 'off';
+  display: inline-block;
+  height: 20px;
+  padding: 0 3px;
+  position: relative;
+  width: 28px;
+  top: 5px;
+  left: 5px;
+  transition: all .3s ease; }
+
+.toggle__input:checked + .toggle__button {
+  background-color: red;
+  border: 1px solid red; }
+
+.toggle__input:checked + .toggle__button::before {
+  color: red;
+  content: 'on';
+  left: 8px; }
+
+.button {
+  border-radius: 5px;
+  font-size: 1em;
+  background-color: lightgray;
+  margin: 0 5px;
+  padding: 0 4px; }
+
+#switches {
+  top: 105px;
+  left: 34px;
+  display: flex; }
+
+@keyframes red_celebration {
+  50% {
+    background: tomato; }
+  100% {
+    background: darkred; } }
+
+@keyframes yellow_celebration {
+  50% {
+    background: yellow; }
+  100% {
+    background: goldenrod; } }
+
+@keyframes blue_celebration {
+  50% {
+    background: lightskyblue; }
+  100% {
+    background: darkblue; } }
+
+@keyframes green_celebration {
+  50% {
+    background: lightgreen; }
+  100% {
+    background: darkgreen; } }
+
+body {
+  background-image: url("data:image/svg+xml,%3Csvg width='12' height='16' viewBox='0 0 12 16' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4 .99C4 .445 4.444 0 5 0c.552 0 1 .45 1 .99v4.02C6 5.555 5.556 6 5 6c-.552 0-1-.45-1-.99V.99zm6 8c0-.546.444-.99 1-.99.552 0 1 .45 1 .99v4.02c0 .546-.444.99-1 .99-.552 0-1-.45-1-.99V8.99z' fill='%23a8a8a8' fill-opacity='0.31' fill-rule='evenodd'/%3E%3C/svg%3E"); }
+
+.text {
+  display: flex;
+  justify-content: space-between;
+  width: 135px;
+  font-size: 12px; }
+
+#title {
+  font-size: 25px;
+  text-shadow: 2px 2px 2px #141414; }
+
+#display {
+  display: inline-table;
+  background: #300;
+  border-radius: 3px;
+  color: red;
+  font-family: 'Press Start 2P';
+  font-size: 16px;
+  line-height: 30px;
+  text-align: center;
+  width: 50px;
+  height: 30px; }
+
+#gameboard {
+  font-family: 'Original Surfer', sans-serif;
+  color: #000;
+  border-radius: 100%;
+  height: 350px;
+  width: 350px;
+  position: relative;
+  border: 10px solid;
+  margin: 30px auto 15px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.42), 0 2px 4px 0 rgba(0, 0, 0, 0.38);
+  display: flex;
+  flex-wrap: wrap; }
+
+.game-section,
+#controls {
+  height: 50%;
+  width: 50%;
+  box-sizing: border-box; }
+
+.game-section {
+  cursor: pointer; }
+  .game-section:active {
+    box-shadow: inset 1px 1px 2px #000,inset -1px -1px 2px #000; }
+
+#green {
+  border-radius: 100% 0 0 0;
+  background: darkgreen;
+  border-bottom: 5px solid;
+  border-right: 5px solid; }
+
+#red {
+  border-radius: 0 100% 0 0;
+  background: darkred;
+  border-bottom: 5px solid;
+  border-left: 5px solid; }
+
+#yellow {
+  border-radius: 0 0 0 100%;
+  background: goldenrod;
+  border-top: 5px solid;
+  border-right: 5px solid; }
+
+#blue {
+  border-radius: 0 0 100% 0;
+  background: darkblue;
+  border-top: 5px solid;
+  border-left: 5px solid; }
+
+.center {
+  margin: 0 auto; }
+
+#controls {
+  background: grey;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border: 10px solid;
+  position: relative;
+  top: -75%;
+  left: 25%;
+  padding: 25px 0;
+  border-width: 10px; }
+
+#green.flash {
+  background: lightgreen; }
+
+#red.flash {
+  background: tomato; }
+
+#yellow.flash {
+  background: yellow; }
+
+#blue.flash {
+  background: lightskyblue; }
+
+#green.win {
+  animation: green_celebration 1s linear .25s infinite; }
+
+#red.win {
+  animation: red_celebration 1s linear .5s infinite; }
+
+#yellow.win {
+  animation: yellow_celebration 1s linear .75s infinite; }
+
+#blue.win {
+  animation: blue_celebration 1s linear 1s infinite; }
+
+@media screen and (min-width: 640px) {
+  #gameboard {
+    height: 500px;
+    width: 500px; }
+  #controls {
+    top: -75%;
+    left: 125px; }
+  #title {
+    font-size: 40px; }
+  .text {
+    width: 180px;
+    font-size: 16px; }
+  .button {
+    padding: 0 8px;
+    font-size: 1.5em; }
+  .toggle__button {
+    width: 45px; } }
+
